@@ -5,4 +5,9 @@
     <color name="colorAccent">#FF4081</color>
     <color name="main_text_default">#000000</color>
     <color name="main_text_select">#303F9F</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="theme_text">#898989</color>
+    <color name="theme_color">#F57708</color>
+    <color name="theme_border">#EEEEEE</color>
 </resources>

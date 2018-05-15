@@ -18,10 +18,17 @@
         android:text="艺人包装"
         android:textColor="#ffffff"
         android:textSize="20sp" />
-    <com.youth.banner.Banner
-        android:id="@+id/banner_artist"
+    <com.example.gll.myapplication.view.card_view.ShareCardView
+        android:id="@+id/share_cardview"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="200dp">
+
+    </com.example.gll.myapplication.view.card_view.ShareCardView>
+    <!--<com.youth.banner.Banner-->
+
+        <!--android:id="@+id/banner_artist"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"/>-->
 
     <LinearLayout
         android:orientation="horizontal"

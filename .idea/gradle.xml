@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/gll_okhttp" />
+            <option value="$PROJECT_DIR$/imageLoader" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

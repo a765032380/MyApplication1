@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="main_text_size">15sp</dimen>
-
+    <dimen name="share_card_height">440dip</dimen>
+    <dimen name="share_card_space">20dip</dimen>
+    <dimen name="share_card_text">16sp</dimen>
 
 </resources>
