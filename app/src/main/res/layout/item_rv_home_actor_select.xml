@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="117dp"
+            android:layout_height="208dp">
+            <ImageView
+                android:id="@+id/iv_home_actor_select"
+                android:background="@drawable/ic_launcher_background"
+                android:layout_width="117dp"
+                android:layout_height="208dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截止到"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tv_home_actor_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018-04-22期"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <!--<TextView-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:id="@+id/tv_title"-->
+            <!--android:text="测试数据"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+        <TextView
+            android:id="@+id/tv_home_actor_select_in"
+            android:text="我要参演"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

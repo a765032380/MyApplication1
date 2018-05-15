@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mlns="http://schemas.android.com/tools">
+     <TextView
+         android:background="@color/colorPrimary"
+         android:text="中国影视官网"
+         android:paddingTop="20dp"
+         android:textSize="20sp"
+         android:gravity="center"
+         android:textColor="#ffffff"
+         android:layout_width="match_parent"
+         android:layout_height="60dp" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_marginTop="60dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <com.youth.banner.Banner
+            mlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/banner"
+            app:indicator_width="10dp"
+            app:indicator_height="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp">
+                    <Button
+                        android:layout_weight="1"
+                        android:text="Button1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    <Button
+                        android:layout_weight="1"
+                        android:text="Button2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp">
+                    <Button
+                        android:layout_weight="1"
+                        android:text="Button1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    <Button
+                        android:layout_weight="1"
+                        android:text="Button2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff" />
+
+        </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.gll.myapplication"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+//    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    /**************************第三方依赖******************************/
+    //滑动返回的依赖
+    implementation 'me.imid.swipebacklayout.lib:library:1.0.0'
+    //注解框架
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //下拉刷新依赖
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-5'
+    //下拉刷新使用了特殊的Header
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.1'
+    //视频播放的依赖
+    implementation 'com.github.xiaoyanger0825:NiceVieoPlayer:v2.2'
+    //图片加载的依赖
+    implementation 'com.sunfusheng:glideimageview:1.2.0'
+    //Banner轮播图
+    implementation 'com.youth.banner:banner:1.4.10'  //最新版本
+    //引用自己封装的OkHttp组件
+    implementation project(':gll_okhttp')
+}

@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="main_one">首页</string>
+    <string name="main_two">众筹</string>
+    <string name="main_three">艺人空间</string>
+    <string name="main_four">个人中心</string>
+    <!--************************视频播放需要的*************-->
+    <string name="uri_test_3">http://120.25.246.21/vrMobile/travelVideo/zhejiang_xuanchuanpian.mp4</string>
+    <string name="uri_test">http://mp4.vjshi.com/2017-09-19/e1920013741c5c66d408c7cdb3d9eddf.mp4</string>
+    <string name="uri_test_1">http://mp4.vjshi.com/2016-12-22/e54d476ad49891bd1adda49280a20692.mp4</string>
+    <string name="uri_test_h">http://mp4.vjshi.com/2017-08-16/af83af63d018816474067b51a835f4a2.mp4</string>
+    <string name="uri_test_5">http://mp4.vjshi.com/2017-10-19/53bfeb9eb92c1748596eaf2a1e649020.mp4</string>
+    <string name="uri_test_6">http://mp4.vjshi.com/2016-10-23/a0511ea830bb0620f94a5340a1879800.mp4</string>
+    <string name="uri_test_7">http://mp4.vjshi.com/2016-10-21/84bafe60ef0af95a5292f66b9f692504.mp4</string>
+    <string name="uri_test_8">http://mp4.vjshi.com/2017-04-14/933db6540f53dd38974b4446388fb928.mp4</string>
+    <string name="uri_test_9">http://mp4.vjshi.com/2015-05-11/1431320221859_786.mp4</string>
+    <string name="uri_test_10">http://mp4.vjshi.com/2013-07-25/2013072519392517096.mp4</string>
+    <string name="uri_test_11">http://mp4.vjshi.com/2016-12-22/3ccab5a78036fa933c8585f4a1e57a44.mp4</string>
+    <string name="uri_test_12">http://mp4.vjshi.com/2016-04-05/add12db77c7c5cd6dfef4c1955b36a80.mp4</string>
+    <string name="uri_test_13">http://rmcdn.2mdn.net/MotifFiles/html/1248596/android_1330378998288.mp4</string>
+    <string name="uri_test_image">http://i3.letvimg.com/lc08_yunzhuanma/201707/29/20/49/3280a525bef381311b374579f360e80a_v2_MTMxODYyNjMw/thumb/2_960_540.jpg</string>
+    <string name="new_message_notification_title_template">New message: %1$s</string>
+    <string name="ad_tag_url"><![CDATA[https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=]]></string>
+    <string name="title_activity_view_pager">ViewPagerActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="hide_danmaku">hide</string>
+    <string name="show_danmaku">show</string>
+    <string name="pause_danmaku">pause</string>
+    <string name="resume_danmaku">resume</string>
+    <string name="send_danmaku">发送一条(纯文字)</string>
+    <string name="send_danmaku_image_text">发送一条(图文)</string>
+    <string name="send_danmakus">定时发送</string>
+    <string name="send_show">控制</string>
+    <string name="cancel_sending_danmakus">取消定时</string>
+    <string name="release">release</string>
+    <string name="rotate">旋转屏幕</string>
+    <string name="play_video">播放视频</string>
+    <string name="down_hint">下载并加密视频</string>
+    <string name="exo_play_wifi_hint_no">您当前网络不是wifi，是否继续观看视频</string>
+    <string name="exo_play_reminder">提示</string>
+    <string name="Detailed_play">默认详细播放</string>
+    <string name="The_list_of_play">列表播放</string>
+    <string name="Custom_layout">自定义布局 </string>
+    <string name="Customize_the_start_button_event">自定义事件</string>
+    <string name="_15m">继续播放 (15 m)</string>
+    <string name="error_hint">出错了</string>
+    <string name="im_btn_hint">广告视频</string>
+    <string name="googlesdk">googleSDK广告视频</string>
+    <string name="custom_media">自定义媒体数据</string>
+    <string name="cache_bideo_btn">离线缓存播放</string>
+    <string name="simple_video_btn">简单加密视频</string>
+    <string name="Skip_the_advertising">跳过广告</string>
+    <string name="default_cache">默认缓存播放</string>
+    <string name="custom_cache">自定义下载缓存</string>
+    <string name="simple_fragment">Fragment列表</string>
+    <string name="simple_barrage">弹幕(测试)</string>
+    <string name="simple_barrage2">弹幕2(测试)</string>
+    <!--************************视频播放需要的*************-->
+
+</resources>
