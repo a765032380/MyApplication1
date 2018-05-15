@@ -45,7 +45,7 @@ public class RoundByXfermode extends ImageView {
     /**
      * 圆角大小的默认值
      */
-    private static final int BODER_RADIUS_DEFAULT = 20;
+    private static final int BODER_RADIUS_DEFAULT = 10;
     /**
      * 圆角的大小
      */

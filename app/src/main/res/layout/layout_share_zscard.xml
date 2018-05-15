@@ -14,7 +14,7 @@
         android:layout_margin="1dip"
         zhy:borderRadius="8dp"
 
-        android:background="@mipmap/share_card_zs" />
+        android:background="#ffffff" />
 
     <RelativeLayout
         android:visibility="gone"

@@ -206,10 +206,11 @@ public class ShareCardView extends FrameLayout implements ViewPager.OnPageChange
         public void setZSCard(View view, ShareCardItem.LRCardItem item) {
             RoundByXfermode imageView=  view.findViewById(R.id.image);
 //            imageView.loadImage(item.getContent(),R.drawable.ic_launcher_background);
-//            Glide.with(view.getContext()).load(item.getContent()).into(imageView);
-            ImageLoaderManager.getInstance(getContext())
-                    .displayImage(imageView,item.getContent());
-            imageView.setBackgroundResource(R.drawable.ic_launcher_background);
+            Glide.with(view.getContext()).load(item.getContent()).into(imageView);
+//            ImageLoaderManager.getInstance(getContext())
+//                    .displayImage(imageView,item.getContent());
+
+//            imageView.setBackgroundResource(R.color.white);
 
 //            TextView zsTv = (TextView) view.findViewById(R.id.zs_tv);
 //            TextView jyeTv = (TextView) view.findViewById(R.id.jye_tv);
