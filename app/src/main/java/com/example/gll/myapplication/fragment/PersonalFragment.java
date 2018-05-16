@@ -39,6 +39,13 @@ import butterknife.OnClick;
 
 
 public class PersonalFragment extends BaseFragment {
+    @Override
+    protected int getLayoutId() {
+        return R.layout.fragment_personal;
+    }
+    public static PersonalFragment newInstance() {
+        return new PersonalFragment();
+    }
 //    @BindView(R.id.ll_caching)
 //    LinearLayout ll_caching;
 //    @BindView(R.id.ll_history)
@@ -105,11 +112,5 @@ public class PersonalFragment extends BaseFragment {
         ButterKnife.bind(this,view);
     }
 
-    @Override
-    protected int getLayoutId() {
-        return R.layout.fragment_personal;
-    }
-    public static PersonalFragment newInstance() {
-        return new PersonalFragment();
-    }
+
 }

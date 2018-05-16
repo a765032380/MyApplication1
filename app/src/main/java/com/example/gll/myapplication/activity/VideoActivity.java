@@ -2,6 +2,9 @@ package com.example.gll.myapplication.activity;
 
 
 import android.view.View;
+
+import com.baisi.imoocsdk.imageloader.ImageLoaderManager;
+import com.bumptech.glide.Glide;
 import com.example.gll.myapplication.R;
 import com.example.gll.myapplication.base.BaseActivity;
 import com.xiao.nicevideoplayer.NiceVideoPlayer;
@@ -19,11 +22,14 @@ public class VideoActivity extends BaseActivity {
     protected void initUI() {
         mNiceVideoPlayer = findViewById(R.id.nice_video_player);
         mNiceVideoPlayer.setPlayerType(NiceVideoPlayer.TYPE_IJK); // or NiceVideoPlayer.TYPE_NATIVE
-        mNiceVideoPlayer.setUp("http://mp4.vjshi.com/2016-04-05/add12db77c7c5cd6dfef4c1955b36a80.mp4", null);
+        mNiceVideoPlayer.setUp("http://tanzi27niu.cdsb.mobi/wps/wp-content/uploads/2017/05/2017-05-17_17-33-30.mp4", null);
 
         TxVideoPlayerController controller = new TxVideoPlayerController(this);
         controller.setTitle("ssss");
-//        controller.setImage(mImageUrl);
+        ImageLoaderManager.getInstance(this)
+                .displayImage(controller.imageView(),"http://tanzi27niu.cdsb.mobi/wps/wp-content/uploads/2017/05/2017-05-17_17-30-43.jpg");
+        controller.imageView().setBackgroundResource(R.drawable.ic_launcher_background);
+//        controller.setImage(R.drawable.ic_launcher_background);
         mNiceVideoPlayer.setController(controller);
 
         findViewById(R.id.mButton).setOnClickListener(new View.OnClickListener() {

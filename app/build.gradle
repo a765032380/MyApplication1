@@ -21,6 +21,9 @@ android {
         checkReleaseBuilds false
         abortOnError false
     }
+    packagingOptions {
+        exclude 'assets/lib/armeabi-v7a/libijkplayer.so'
+    }
 }
 
 dependencies {
@@ -29,7 +32,6 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-//    testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     /**************************第三方依赖******************************/
@@ -42,17 +44,18 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-5'
     //下拉刷新使用了特殊的Header
     implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.1'
-    //视频播放的依赖
-    implementation 'com.github.xiaoyanger0825:NiceVieoPlayer:v2.2'
     //图片加载的依赖
     implementation 'com.sunfusheng:glideimageview:1.2.0'
     //Banner轮播图
     implementation 'com.youth.banner:banner:1.4.10'  //最新版本
     //沉浸式的依赖
     implementation 'com.gyf.barlibrary:barlibrary:2.3.0'
-    //gson的依赖
-    implementation 'com.google.code.gson:gson:2.6.2'
+    //G_S_O_N的依赖
+    implementation 'com.google.code.gson:gson:2.8.4'
     //引用自己封装的OkHttp组件
     implementation project(':gll_okhttp')
+    //自己封装的图片加载组件
     implementation project(path: ':imageLoader')
+    //视频播放的依赖
+    implementation project(path: ':nicevideoplayer')
 }

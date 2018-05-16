@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.gll.myapplication.R;
+import com.example.gll.myapplication.activity.VideoActivity;
 import com.example.gll.myapplication.adapter.HomeActorSelectAdapter;
 import com.example.gll.myapplication.base.BaseFragment;
 import com.example.gll.myapplication.bean.ShareCardItem;
@@ -93,6 +94,7 @@ public class ArtistFragment extends BaseFragment implements OnRefreshListener{
         shareCardView.setOnClickListener(new ShareCardView.OnClickListener1() {
             @Override
             public void onClickListener(String url) {
+                startActivity(VideoActivity.class);
 //                Intent intent = new Intent(getContext(), MyWebViewActivity.class);
 //                intent.putExtra("url", url);
 //                getContext().startActivity(intent);

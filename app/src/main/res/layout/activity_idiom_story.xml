@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:id="@+id/tv_return"
+            android:layout_weight="1"
+            android:paddingTop="20dp"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:background="@color/colorPrimary"
+            android:text="成语故事"
+            android:paddingTop="20dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="60dp" />
+        <TextView
+            android:layout_weight="1"
+            android:paddingTop="20dp"
+            android:layout_width="0dp"
+            android:layout_height="60dp" />
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_marginTop="60dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            app:indicator_width="10dp"
+            app:indicator_height="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+        </com.youth.banner.Banner>
+        <TextView
+            android:text="全网热播"
+            android:textSize="25sp"
+            android:paddingLeft="8dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <android.support.v7.widget.RecyclerView
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff" />
+
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</android.support.constraint.ConstraintLayout>

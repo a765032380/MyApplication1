@@ -20,12 +20,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.personal.AccountActivity"> </activity>
+        <activity android:name=".activity.personal.CachingActivity"> </activity>
+        <activity android:name=".activity.personal.CollectionActivity"> </activity>
+        <activity android:name=".activity.personal.HelpActivity"> </activity>
+        <activity android:name=".activity.personal.HistoryActivity"> </activity>
+        <activity android:name=".activity.personal.PasswordActivity"> </activity>
+        <activity android:name=".activity.personal.SettingActivity"> </activity>
+        <activity android:name=".activity.personal.VoteActivity"> </activity>
+        <activity android:name=".activity.personal.WalletActivity"> </activity>
         <activity android:name=".activity.VideoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
-
         </activity>
         <activity android:name=".activity.RecycleActivity"> </activity>
         <activity android:name=".activity.ImageActivity"> </activity>
+        <activity android:name=".activity.IdiomStoryActivity"> </activity>
+        <activity android:name=".activity.HealthActivity"> </activity>
+        <activity android:name=".activity.LoginActivity"> </activity>
+
+
+
     </application>
 
 </manifest>

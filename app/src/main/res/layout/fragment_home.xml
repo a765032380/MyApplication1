@@ -46,16 +46,29 @@
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:layout_height="0dp">
-                    <Button
+                    <LinearLayout
+                        android:id="@+id/ll_home_idiom_story"
                         android:layout_weight="1"
-                        android:text="Button1"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent" />
-                    <Button
+                        android:layout_height="match_parent" >
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Button1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_home_health"
                         android:layout_weight="1"
-                        android:text="Button2"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent" >
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Button2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
 
                 </LinearLayout>
                 <LinearLayout
@@ -63,16 +76,28 @@
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:layout_height="0dp">
-                    <Button
+                    <LinearLayout
+                        android:id="@+id/ll_home_urban_culture"
                         android:layout_weight="1"
-                        android:text="Button1"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent" />
-                    <Button
+                        android:layout_height="match_parent" >
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Button3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_home_variety"
                         android:layout_weight="1"
-                        android:text="Button2"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent" >
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Button4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
 
                 </LinearLayout>
             </LinearLayout>

@@ -5,8 +5,10 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.example.gll.myapplication.R;
+import com.example.gll.myapplication.activity.IdiomStoryActivity;
 import com.example.gll.myapplication.adapter.HomeAdapter;
 import com.example.gll.myapplication.base.BaseFragment;
 import com.example.gll.myapplication.loader.GlideImageLoader;
@@ -23,6 +25,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 /**
@@ -43,36 +46,62 @@ public class HomeFragment extends BaseFragment implements OnRefreshListener,OnLo
     RecyclerView recyclerView;
     @BindView(R.id.refreshLayout)
     RefreshLayout refreshLayout;
+    @BindView(R.id.ll_home_idiom_story)
+    LinearLayout ll_home_idiom_story;
+    @BindView(R.id.ll_home_health)
+    LinearLayout ll_home_health;
+    @BindView(R.id.ll_home_urban_culture)
+    LinearLayout ll_home_urban_culture;
+    @BindView(R.id.ll_home_variety)
+    LinearLayout ll_home_variety;
+    @OnClick({R.id.ll_home_idiom_story,
+            R.id.ll_home_health,
+            R.id.ll_home_urban_culture,
+            R.id.ll_home_variety})
+    public void onClick(View view){
+        switch (view.getId()){
+            case R.id.ll_home_idiom_story:
+                startActivity(IdiomStoryActivity.class);
+                break;
+            case R.id.ll_home_health:
+                break;
+            case R.id.ll_home_urban_culture:
+                break;
+            case R.id.ll_home_variety:
+                break;
+        }
 
-    private ArrayList<String> mList=new ArrayList<>();;
+    }
+
+
+    private ArrayList<String> mList=new ArrayList<>();
     private HomeAdapter adapter;
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
         ButterKnife.bind(this,view);
-        setBanner();
+
         initRefresh();
-    }
-    private void initData(){
-//        RequestCenter.postRequest();
+        initRecycleView();
+        setBanner();
     }
 
-    private void initRefresh() {
+    private void initRecycleView() {
         adapter=new HomeAdapter( getData() );
         recyclerView.setAdapter(adapter);
-//        ScrollLinearLayoutManager scrollLinearLayoutManager=new ScrollLinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setFocusable(false);
         linearLayoutManager.setSmoothScrollbarEnabled(true);
         linearLayoutManager.setAutoMeasureEnabled(true);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setNestedScrollingEnabled(false);
-
+    }
+    private void initRefresh() {
         refreshLayout.setRefreshHeader(new ClassicsHeader(getContext()));
         refreshLayout.setRefreshFooter(new ClassicsFooter(getContext()).setSpinnerStyle(SpinnerStyle.Scale));
         refreshLayout.setOnRefreshListener(this);
         refreshLayout.autoRefresh();//自动刷新
-        refreshLayout.setEnableLoadMore(false);
-//        refreshLayout.setOnLoadMoreListener(this);
+        refreshLayout.setEnableLoadMore(false);     //关闭上拉加载更多
+//        refreshLayout.setOnLoadMoreListener(this);//上拉加载更多监听
     }
 
     private void setBanner() {

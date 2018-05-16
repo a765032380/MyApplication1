@@ -1,5 +1,6 @@
 package com.example.gll.myapplication.activity.personal;
 
+import com.example.gll.myapplication.R;
 import com.example.gll.myapplication.base.BaseActivity;
 
 /**
@@ -18,6 +19,6 @@ public class CollectionActivity extends BaseActivity {
 
     @Override
     protected int getContentViewId() {
-        return 0;
+        return R.layout.activity_collection;
     }
 }
