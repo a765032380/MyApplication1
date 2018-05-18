@@ -37,7 +37,7 @@
         <activity android:name=".activity.IdiomStoryActivity"> </activity>
         <activity android:name=".activity.HealthActivity"> </activity>
         <activity android:name=".activity.LoginActivity"> </activity>
-
+        <activity android:name=".activity.RegisteredActivity" />
 
 
     </application>
