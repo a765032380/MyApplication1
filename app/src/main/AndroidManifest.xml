@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:name=".app.MyApp"
         android:theme="@style/AppTheme">
+        <!--**********************Activity************************-->
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,6 +40,8 @@
         <activity android:name=".activity.LoginActivity"> </activity>
         <activity android:name=".activity.RegisteredActivity" />
 
+        <!--**********************Service************************-->
+        <service android:name="com.yaoxiaowen.download.service.DownloadService"/>
 
     </application>
 

@@ -7,13 +7,12 @@
     android:background="@drawable/bg_share_card">
 
     <com.example.gll.myapplication.view.RoundByXfermode
-        android:scaleType="fitXY"
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="1dip"
         zhy:borderRadius="8dp"
-
+        android:scaleType="fitXY"
         android:background="#ffffff" />
 
     <RelativeLayout

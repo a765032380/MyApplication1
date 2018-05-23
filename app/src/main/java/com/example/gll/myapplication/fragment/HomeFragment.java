@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.gll.myapplication.R;
+import com.example.gll.myapplication.activity.HealthActivity;
 import com.example.gll.myapplication.activity.IdiomStoryActivity;
+import com.example.gll.myapplication.activity.personal.CachingActivity;
 import com.example.gll.myapplication.adapter.HomeAdapter;
 import com.example.gll.myapplication.base.BaseFragment;
 import com.example.gll.myapplication.loader.GlideImageLoader;
@@ -61,9 +63,10 @@ public class HomeFragment extends BaseFragment implements OnRefreshListener,OnLo
     public void onClick(View view){
         switch (view.getId()){
             case R.id.ll_home_idiom_story:
-                startActivity(IdiomStoryActivity.class);
+                startActivity(CachingActivity.class);
                 break;
             case R.id.ll_home_health:
+                startActivity(HealthActivity.class);
                 break;
             case R.id.ll_home_urban_culture:
                 break;

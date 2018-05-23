@@ -205,8 +205,11 @@ public class ShareCardView extends FrameLayout implements ViewPager.OnPageChange
         //中间卡片
         public void setZSCard(View view, ShareCardItem.LRCardItem item) {
             RoundByXfermode imageView=  view.findViewById(R.id.image);
+//            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
 //            imageView.loadImage(item.getContent(),R.drawable.ic_launcher_background);
-            Glide.with(view.getContext()).load(item.getContent()).into(imageView);
+            Glide.with(view.getContext())
+                    .load(item.getContent())
+                    .into(imageView);
 //            ImageLoaderManager.getInstance(getContext())
 //                    .displayImage(imageView,item.getContent());
 

@@ -58,4 +58,8 @@ dependencies {
     implementation project(path: ':imageLoader')
     //视频播放的依赖
     implementation project(path: ':nicevideoplayer')
+    //ViewPager指示器组件
+    implementation project(path: ':magicindicator')
+    //下载文件的依赖，支持断点续传
+    implementation project(path :':downloaderHelper')
 }

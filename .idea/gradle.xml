@@ -9,8 +9,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/downloaderHelper" />
             <option value="$PROJECT_DIR$/gll_okhttp" />
             <option value="$PROJECT_DIR$/imageLoader" />
+            <option value="$PROJECT_DIR$/magicindicator" />
             <option value="$PROJECT_DIR$/nicevideoplayer" />
           </set>
         </option>

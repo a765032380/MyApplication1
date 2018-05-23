@@ -4,5 +4,9 @@
     <dimen name="share_card_height">440dip</dimen>
     <dimen name="share_card_space">20dip</dimen>
     <dimen name="share_card_text">16sp</dimen>
-
+    <dimen name="common_navigator_height">30dp</dimen>
+    <dimen name="navigator_margin_top">5dp</dimen>
+    <dimen name="small_navigator_height">5dp</dimen>
+    <dimen name="navigator_margin_top_large">45dp</dimen>
+    <dimen name="large_navigator_height">65dp</dimen>
 </resources>

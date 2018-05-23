@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class ViewHolder extends RecyclerView.ViewHolder
@@ -70,5 +71,16 @@ public class ViewHolder extends RecyclerView.ViewHolder
         View view = getView(viewId);
         view.setOnClickListener(listener);
         return this;
+    }
+
+
+    public ViewHolder setProgress(int viewId,int progress){
+        ProgressBar view=getView(viewId);
+        view.setProgress(progress);
+        return this;
+    }
+    public String getText(int viewId){
+        TextView view=getView(viewId);
+        return view.getText().toString().trim();
     }
 }
