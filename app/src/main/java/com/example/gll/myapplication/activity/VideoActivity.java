@@ -20,7 +20,7 @@ public class VideoActivity extends BaseActivity {
     private NiceVideoPlayer mNiceVideoPlayer;
     @Override
     protected void initUI() {
-        mNiceVideoPlayer = findViewById(R.id.nice_video_player);
+        mNiceVideoPlayer = (NiceVideoPlayer) findViewById(R.id.nice_video_player);
         mNiceVideoPlayer.setPlayerType(NiceVideoPlayer.TYPE_IJK); // or NiceVideoPlayer.TYPE_NATIVE
         mNiceVideoPlayer.setUp("http://tanzi27niu.cdsb.mobi/wps/wp-content/uploads/2017/05/2017-05-17_17-33-30.mp4", null);
 

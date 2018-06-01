@@ -10,4 +10,7 @@
     <color name="theme_text">#898989</color>
     <color name="theme_color">#F57708</color>
     <color name="theme_border">#EEEEEE</color>
+    <color name="title_color">#3F51B5</color>
+    <color name="line">#323232</color>
+
 </resources>

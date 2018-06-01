@@ -2,6 +2,8 @@ package com.baisi.myapplication.okhttp.request;
 
 import android.util.Log;
 
+import com.baisi.myapplication.adutil.Base64;
+
 import java.io.File;
 import java.util.Map;
 
@@ -49,7 +51,7 @@ public class CommonRequest {
             for (Map.Entry<String, String> entry : params.urlParams.entrySet()) {
 
                 mFormBodyBuild.add(entry.getKey(), entry.getValue());
-
+                Log.i("LLLL",entry.getKey()+"---"+ Base64.decode(entry.getValue()));
                 RequestBody.create(FORM_CONTENT_TYPE,entry.getValue());
             }
         }

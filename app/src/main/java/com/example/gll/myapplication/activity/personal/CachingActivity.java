@@ -114,7 +114,7 @@ public class CachingActivity extends BaseActivity {
         }
 
 
-        recyclerView=findViewById(R.id.recyclerView);
+        recyclerView= (RecyclerView) findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
         adapter =   new CommonAdapter<TextClass>(this,R.layout.activity_simple_main, mList) {

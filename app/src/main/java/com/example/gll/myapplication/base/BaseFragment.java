@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public abstract class BaseFragment extends Fragment {
 
-    protected BaseActivity mActivity;
+    protected Base2Activity mActivity;
 
     protected abstract void initView(View view, Bundle savedInstanceState);
 
@@ -19,14 +19,14 @@ public abstract class BaseFragment extends Fragment {
     protected abstract int getLayoutId();
 
     //获取宿主Activity
-    protected BaseActivity getHoldingActivity() {
+    protected Base2Activity getHoldingActivity() {
         return mActivity;
     }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        this.mActivity = (BaseActivity) activity;
+        this.mActivity = (Base2Activity) activity;
     }
 
     //添加fragment

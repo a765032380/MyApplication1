@@ -18,7 +18,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public abstract class AppActivity extends BaseActivity {
+public abstract class AppActivity extends Base2Activity {
 
     public static AppActivity appActivity;
     //获取第一个fragment

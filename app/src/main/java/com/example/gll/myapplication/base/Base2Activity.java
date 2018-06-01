@@ -14,8 +14,12 @@ import com.gyf.barlibrary.ImmersionBar;
 import com.gyf.barlibrary.OnKeyboardListener;
 
 
-public abstract class BaseActivity extends MySwipeBackActivity {
-
+public abstract class Base2Activity extends AppCompatActivity {
+    /**
+     * 设置布局文件
+     * @return
+     */
+    protected abstract int getContentViewId();
     /**
      * 初始化UI
      */
@@ -26,8 +30,10 @@ public abstract class BaseActivity extends MySwipeBackActivity {
      */
     protected abstract void initData();
 
-    protected void init(){
-
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(getContentViewId());
         initBar();
         ImmersionBar.with(this).init();
         if (null != getIntent()) {

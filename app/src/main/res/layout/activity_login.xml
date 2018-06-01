@@ -5,48 +5,121 @@
     android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/ic_launcher_background" />
     <LinearLayout
+        android:background="@drawable/edit_bg"
         android:layout_width="300dp"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
+        android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <LinearLayout
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="30dp">
-
+            android:layout_height="0dp"
+            android:layout_weight="1">
             <TextView
-                android:id="@+id/tv_average_user"
-                android:layout_width="0dp"
+                android:text="账号："
                 android:gravity="center"
-                android:layout_height="match_parent"
+                android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="普通用户" />
+                android:layout_height="match_parent" />
+            <EditText
+                android:paddingLeft="8dp"
+                android:hint="请输入账号"
+                android:textSize="@dimen/ed_hint_text_size"
+                android:id="@+id/ed_account"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:background="@drawable/edit_bg"
+                android:layout_height="match_parent" />
 
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
             <TextView
-                android:id="@+id/tv_enterprise_customers"
-                android:layout_width="0dp"
+                android:text="密码："
                 android:gravity="center"
-                android:layout_height="match_parent"
+                android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="企业用户" />
-
+                android:layout_height="match_parent" />
+            <EditText
+                android:hint="密码6-16位，建议数字加字母组合"
+                android:textSize="@dimen/ed_hint_text_size"
+                android:paddingLeft="6dp"
+                android:inputType="textPassword"
+                android:id="@+id/ed_password"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:background="@drawable/edit_bg"
+                android:layout_height="match_parent" />
             <TextView
-                android:id="@+id/tv_artists"
+                android:text="隐藏"
+                android:id="@+id/tv_hidden"
+                android:layout_marginLeft="-23dp"
                 android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right"
+            android:text="忘记密码？"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:text="登录"
+            android:gravity="center"
+            android:background="@drawable/edit_bg"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/tv_goto_registered"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:text="没有账号？现在去注册"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_WaChat"
+                android:text="微信"
                 android:gravity="center"
-                android:layout_height="match_parent"
+                android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="艺人" />
-
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_QQ"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="QQ"
+                android:gravity="center"
+                android:layout_height="match_parent" />
         </LinearLayout>
 
     </LinearLayout>

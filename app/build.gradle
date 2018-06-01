@@ -36,7 +36,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     /**************************第三方依赖******************************/
     //滑动返回的依赖
-    implementation 'me.imid.swipebacklayout.lib:library:1.0.0'
+    implementation 'me.imid.swipebacklayout.lib:library:1.1.0'
     //注解框架
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'

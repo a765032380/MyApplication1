@@ -13,7 +13,6 @@ import android.widget.Toast;
 import com.example.gll.myapplication.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 

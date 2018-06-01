@@ -4,6 +4,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
+import com.baisi.myapplication.adutil.Base64;
 import com.baisi.myapplication.adutil.ResponseEntityToModule;
 import com.baisi.myapplication.okhttp.exception.OkHttpException;
 import com.baisi.myapplication.okhttp.listener.DisposeDataHandle;
@@ -108,12 +109,14 @@ public class CommonJsonCallback implements Callback {
         return tempList;
     }
 
-    private void handleResponse(Object responseObj) {
+    private void handleResponse(Object response) {
 
+
+
+        String responseObj= Base64.decode(String.valueOf(response));
 
         Log.i("LLLLLL",String.valueOf(responseObj));
-//        Log.i("YYYYY",String.valueOf(responseObj));
-//        Log.i("AAA",String.valueOf(responseObj));
+
         if (responseObj == null || responseObj.toString().trim().equals("")) {
             mListener.onFailure(new OkHttpException(NETWORK_ERROR, EMPTY_MSG));
             return;
@@ -154,21 +157,21 @@ public class CommonJsonCallback implements Callback {
 
                 mListener.onSuccess(result);
             } else {
-//                if (result!=null){
-//                    Log.i("BBB",String.valueOf(responseObj));
-//                    mListener.onSuccess(result);
-//
-//                }else {
-//                    mListener.onFailure(new OkHttpException(JSON_ERROR, EMPTY_MSG));
-//                }
+                if (result!=null){
+                    Log.i("BBB",String.valueOf(responseObj));
+                    mListener.onSuccess(result);
 
-                Object obj = ResponseEntityToModule.parseJsonObjectToModule(result, mClass);
-                Log.i("CCC",String.valueOf(obj));
-                if (obj != null) {
-                    mListener.onSuccess(obj);
-                } else {
+                }else {
                     mListener.onFailure(new OkHttpException(JSON_ERROR, EMPTY_MSG));
                 }
+
+//                Object obj = ResponseEntityToModule.parseJsonObjectToModule(result, mClass);
+//                Log.i("CCC",String.valueOf(obj));
+//                if (obj != null) {
+//                    mListener.onSuccess(obj);
+//                } else {
+//                    mListener.onFailure(new OkHttpException(JSON_ERROR, EMPTY_MSG));
+//                }
             }
         } catch (Exception e) {
             Log.i("DDD",String.valueOf(NETWORK_ERROR));
