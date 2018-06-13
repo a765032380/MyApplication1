@@ -39,6 +39,7 @@
                 android:paddingLeft="8dp"
                 android:hint="请输入账号"
                 android:textSize="@dimen/ed_hint_text_size"
+                android:inputType="phone"
                 android:id="@+id/ed_account"
                 android:layout_width="0dp"
                 android:layout_weight="5"

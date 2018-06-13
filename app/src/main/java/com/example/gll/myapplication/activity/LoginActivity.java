@@ -16,6 +16,8 @@ import com.example.gll.myapplication.bean.Login;
 import com.example.gll.myapplication.constant.URL;
 import com.example.gll.myapplication.util.ParamsUtils;
 import com.example.gll.myapplication.util.RegexUtils;
+import com.example.gll.myapplication.util.RequestUtils;
+import com.example.gll.myapplication.util.SPUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -46,6 +48,10 @@ public class LoginActivity extends Base2Activity {
 
     @Override
     protected void initUI() {
+        if (SPUtil.isLogin()){
+            startActivity(MainActivity.class);
+            finish();
+        }
         ButterKnife.bind(this);
         loginActivity=this;
     }
@@ -119,12 +125,16 @@ public class LoginActivity extends Base2Activity {
         RequestCenter.postRequest(URL.API_LOGIN, Login.class, ParamsUtils.addRow(params), new DisposeDataListener() {
             @Override
             public void onSuccess(Object responseObj) {
-                Login login= (Login) responseObj;
-                if (login.getCode()==0){
-                    loginSuccess(login);
-                }else {
-
-                }
+                SPUtil.isLogin(true);
+                startActivity(MainActivity.class);
+                finish();
+//                Login login= (Login) responseObj;
+//                if (login.getCode()== RequestUtils.SUCCESS){
+//                    loginSuccess(login);
+//                    finish();
+//                }else {
+//
+//                }
             }
 
             @Override

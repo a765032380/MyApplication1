@@ -10,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.gll.myapplication.view.CustomImageView;
+import com.example.gll.myapplication.view.RoundByXfermode;
+
 public class ViewHolder extends RecyclerView.ViewHolder
 {
     private SparseArray<View> mViews;
@@ -61,6 +64,11 @@ public class ViewHolder extends RecyclerView.ViewHolder
     public ViewHolder setImageResource(int viewId, int resId)
     {
         ImageView view = getView(viewId);
+        view.setImageResource(resId);
+        return this;
+    }
+    public ViewHolder setRoundByXfermode(int viewId,int resId){
+        RoundByXfermode view=getView(viewId);
         view.setImageResource(resId);
         return this;
     }

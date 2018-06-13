@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.gll.myapplication.R;
+import com.example.gll.myapplication.activity.CrowdDetailsActivity;
 import com.example.gll.myapplication.adapter.HomeAdapter;
 import com.example.gll.myapplication.adapter.base.CommonAdapter;
 import com.example.gll.myapplication.adapter.base.ViewHolder;
@@ -57,8 +58,15 @@ public class CrowdFragment extends BaseFragment implements OnRefreshListener,OnL
     private void initRecycleView() {
         adapter= new CommonAdapter<String>(getContext(),R.layout.item_rv_crowd, getData()) {
             @Override
-            public void convert(ViewHolder holder, String s) {
+            public void convert(ViewHolder holder, final String s) {
                 holder.setText(R.id.tv_title,s);
+                holder.setOnClickListener(R.id.ll_crowd_item, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        showToast("点击了"+s);
+                        startActivity(CrowdDetailsActivity.class);
+                    }
+                });
             }
         };
         recyclerView.setAdapter(adapter);

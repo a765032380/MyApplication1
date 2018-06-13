@@ -1,75 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/ll_crowd_item"
+    android:orientation="vertical"
+    android:layout_height="220dp">
     <LinearLayout
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <RelativeLayout
-            android:layout_width="208dp"
-            android:layout_height="117dp">
-            <ImageView
-                android:id="@+id/iv_home_variety"
-                android:background="@drawable/ic_launcher_background"
-                android:layout_width="208dp"
-                android:layout_height="117dp" />
-            <TextView
-                android:layout_marginBottom="8dp"
-                android:layout_marginRight="8dp"
-                android:id="@+id/tv_home_permissions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/iv_home_variety"
-                android:layout_alignEnd="@+id/iv_home_variety"
-                android:background="@color/colorAccent"
-                android:text="付费观看"
-                android:textColor="#ffffff" />
-            <TextView
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
-                android:id="@+id/tv_home_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/iv_home_variety"
-                android:layout_alignStart="@+id/iv_home_variety"
-                android:background="@color/colorAccent"
-                android:text="2018-04-22期"
-                android:textColor="#ffffff" />
-
-        </RelativeLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp">
-            <TextView
-                android:id="@+id/tv_title"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="测试数据" />
-            <TextView
-                android:id="@+id/tv_count"
-                android:layout_marginRight="4dp"
-                android:layout_marginTop="3dp"
-                android:gravity="end"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:textSize="10sp"
-                android:layout_height="wrap_content"
-                android:text="1000万次播放" />
-        </LinearLayout>
-
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:ignore="Suspicious0dp">
         <TextView
-            android:layout_marginLeft="5dp"
-            android:layout_gravity="start"
-            android:id="@+id/tv_context"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="测试数据" />
+            android:id="@+id/tv_title"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="倩女幽魂"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_type"
+            android:text="电影"
+            android:gravity="center_vertical|right"
+            android:paddingRight="15dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_weight="6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ImageView
+            android:id="@+id/iv_image1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_launcher_background"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/iv_image2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_launcher_background"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/iv_image3"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_launcher_background"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:gravity="center"
+            android:text="目标80000元"
+            android:id="@+id/tv_tv1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:gravity="center"
+            android:text="已筹54000元"
+            android:id="@+id/tv_tv2"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:gravity="center"
+            android:text="88人投资"
+            android:id="@+id/tv_tv3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/tv_state"
+            android:text="正在进行中"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

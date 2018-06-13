@@ -18,12 +18,16 @@
         <activity android:name=".activity.MainActivity">
 
         </activity>
-        <activity android:name=".activity.LoginActivity" android:windowSoftInputMode="stateHidden|adjustResize">
+        <activity android:name=".welcome.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".welcome.GuideActivity"/>
+        <activity android:name=".activity.LoginActivity" android:windowSoftInputMode="stateHidden|adjustResize">
+
         </activity>
         <activity android:name=".activity.RegisteredActivity" android:windowSoftInputMode="stateHidden|adjustResize"/>
         <activity android:name=".activity.personal.AccountActivity" android:theme="@style/otherPageStyle"> </activity>
@@ -36,7 +40,8 @@
         <activity android:name=".activity.personal.VoteActivity" android:theme="@style/otherPageStyle"> </activity>
         <activity android:name=".activity.personal.WalletActivity" android:theme="@style/otherPageStyle"> </activity>
         <activity android:name=".activity.VideoActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize" android:theme="@style/otherPageStyle">
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name=".activity.RecycleActivity" android:theme="@style/otherPageStyle"> </activity>
         <activity android:name=".activity.ImageActivity" android:theme="@style/otherPageStyle"> </activity>
@@ -48,6 +53,10 @@
         <activity android:name=".activity.BindPhoneActivity" android:theme="@style/otherPageStyle"/>
         <activity android:name=".activity.VerifyPhoneActivity" android:theme="@style/otherPageStyle"/>
         <activity android:name=".activity.ResetPasswordActivity" android:theme="@style/otherPageStyle"/>
+        <activity android:name=".activity.CrowdDetailsActivity" android:theme="@style/otherPageStyle"/>
+        <activity android:name=".activity.InvestmentActivity" android:theme="@style/otherPageStyle"/>
+
+
         <activity android:name=".activity.RegisteredNextActivity" />
 
         <!--**********************Service************************-->

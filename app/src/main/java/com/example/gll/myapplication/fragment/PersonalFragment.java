@@ -1,6 +1,8 @@
 package com.example.gll.myapplication.fragment;
 
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -14,11 +16,16 @@ import com.example.gll.myapplication.activity.personal.PasswordActivity;
 import com.example.gll.myapplication.activity.personal.SettingActivity;
 import com.example.gll.myapplication.activity.personal.VoteActivity;
 import com.example.gll.myapplication.activity.personal.WalletActivity;
+import com.example.gll.myapplication.adapter.HomeAdapter;
+import com.example.gll.myapplication.adapter.base.CommonAdapter;
+import com.example.gll.myapplication.adapter.base.ViewHolder;
 import com.example.gll.myapplication.base.BaseFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static com.example.gll.myapplication.util.Text.getData;
 
 
 /**
@@ -39,6 +46,8 @@ import butterknife.OnClick;
 
 
 public class PersonalFragment extends BaseFragment {
+    @BindView(R.id.mRecyclerView)
+    RecyclerView mRecyclerView;
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_personal;
@@ -110,7 +119,29 @@ public class PersonalFragment extends BaseFragment {
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
         ButterKnife.bind(this,view);
+        initRecycleView();
     }
+    private void initRecycleView() {
+        mRecyclerView.setAdapter(new CommonAdapter<String>(getContext(),R.layout.item_personal, getData()) {
+            @Override
+            public void convert(ViewHolder holder, final String s) {
+                holder.setText(R.id.tv_context,s);
+                holder.setOnClickListener(R.id.ll_personal_item, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        showToast("点击了"+s);
+                    }
+                });
+//                holder.setImageResource(R.id.iv_image,s)
+            }
 
+        });
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        mRecyclerView.setFocusable(false);
+        linearLayoutManager.setSmoothScrollbarEnabled(true);
+        linearLayoutManager.setAutoMeasureEnabled(true);
+        mRecyclerView.setLayoutManager(linearLayoutManager);
+        mRecyclerView.setNestedScrollingEnabled(false);
+    }
 
 }

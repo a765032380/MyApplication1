@@ -56,10 +56,15 @@ dependencies {
     implementation project(':gll_okhttp')
     //自己封装的图片加载组件
     implementation project(path: ':imageLoader')
-    //视频播放的依赖
-    implementation project(path: ':nicevideoplayer')
+//    //视频播放的依赖
+//    implementation project(path: ':nicevideoplayer')
     //ViewPager指示器组件
     implementation project(path: ':magicindicator')
     //下载文件的依赖，支持断点续传
     implementation project(path :':downloaderHelper')
+    //引用自动定义的进度条View
+    implementation project(path :':NumberProgressBar')
+    //视频播放完整版引入
+    implementation 'com.shuyu:GSYVideoPlayer:5.0.0-beta'
+
 }

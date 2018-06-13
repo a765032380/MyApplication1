@@ -133,7 +133,9 @@ public class RegisteredActivity extends BaseActivity {
                 public void onSuccess(Object responseObj) {
                     Registered registered= (Registered) responseObj;
                     if (registered.getCode()== RequestUtils.SUCCESS){
-
+                        finish();
+                        LoginActivity.loginActivity.finish();
+                        startActivity(RegisteredNextActivity.class);
                     }
                 }
 
@@ -144,9 +146,7 @@ public class RegisteredActivity extends BaseActivity {
             });
 
 
-            finish();
-            LoginActivity.loginActivity.finish();
-            startActivity(RegisteredNextActivity.class);
+
         }
     }
 

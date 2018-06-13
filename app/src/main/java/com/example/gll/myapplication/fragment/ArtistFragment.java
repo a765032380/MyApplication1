@@ -94,6 +94,7 @@ public class ArtistFragment extends BaseFragment implements OnRefreshListener{
         shareCardView.setOnClickListener(new ShareCardView.OnClickListener1() {
             @Override
             public void onClickListener(String url) {
+
                 startActivity(VideoActivity.class);
 //                Intent intent = new Intent(getContext(), MyWebViewActivity.class);
 //                intent.putExtra("url", url);
@@ -122,6 +123,6 @@ public class ArtistFragment extends BaseFragment implements OnRefreshListener{
 
     @Override
     public void onRefresh(@NonNull RefreshLayout refreshLayout) {
-        refreshLayout.finishRefresh(1100/*,false*/);//传入false表示刷新失败
+        refreshLayout.finishRefresh(500/*,false*/);//传入false表示刷新失败
     }
 }

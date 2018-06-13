@@ -21,6 +21,7 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.youth.banner.Banner;
+import com.youth.banner.listener.OnBannerListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -119,6 +120,12 @@ public class HomeFragment extends BaseFragment implements OnRefreshListener,OnLo
         banner.setImages(list);
         //设置轮播时间
         banner.setDelayTime(1500);
+        banner.setOnBannerListener(new OnBannerListener() {
+            @Override
+            public void OnBannerClick(int position) {
+                showToast("你点击了第"+position+"条");
+            }
+        });
         //banner设置方法全部调用完毕时最后调用
         banner.start();
     }
@@ -146,11 +153,11 @@ public class HomeFragment extends BaseFragment implements OnRefreshListener,OnLo
     @Override
     public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
         adapter.updateData(getData());
-        refreshLayout.finishLoadMore(1100/*,false*/);//传入false表示加载失败
+        refreshLayout.finishLoadMore(500/*,false*/);//传入false表示加载失败
     }
 
     @Override
     public void onRefresh(@NonNull RefreshLayout refreshLayout) {
-        refreshLayout.finishRefresh(1100/*,false*/);//传入false表示刷新失败
+        refreshLayout.finishRefresh(500/*,false*/);//传入false表示刷新失败
     }
 }

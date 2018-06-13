@@ -1,44 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail_player"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.xiao.nicevideoplayer.NiceVideoPlayer
-        android:id="@+id/nice_video_player"
-        android:layout_width="match_parent"
-        android:layout_height="200dp">
+    <!--<com.xiao.nicevideoplayer.NiceVideoPlayer-->
+        <!--android:visibility="gone"-->
+        <!--android:id="@+id/nice_video_player"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp">-->
 
-    </com.xiao.nicevideoplayer.NiceVideoPlayer>
+    <!--</com.xiao.nicevideoplayer.NiceVideoPlayer>-->
 
-    <Button
-        android:id="@+id/mButton"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="跳转到RecycleActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nice_video_player"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
+    <!--<Button-->
+        <!--android:visibility="gone"-->
+        <!--android:id="@+id/mButton"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text="跳转到RecycleActivity"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/nice_video_player"-->
+        <!--app:layout_constraintVertical_bias="0.0"-->
+        <!--tools:ignore="MissingConstraints" />-->
 
-    <Button
-        android:id="@+id/mButton1"
+    <!--<Button-->
+        <!--android:visibility="gone"-->
+        <!--android:id="@+id/mButton1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text="跳转到ImageActivity"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/mButton"-->
+        <!--app:layout_constraintVertical_bias="0.0"-->
+        <!--tools:ignore="MissingConstraints" />-->
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/post_detail_nested_scroll"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="跳转到ImageActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mButton"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/post_media_height" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dasdasdasdas"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <com.shuyu.gsyvideoplayer.video.GSYSampleADVideoPlayer
+        android:id="@+id/ad_player"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/post_media_height" />
+
+</RelativeLayout>

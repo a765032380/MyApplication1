@@ -52,6 +52,7 @@ public class HealthActivity extends BaseActivity{
         MagicIndicator magicIndicator = (MagicIndicator) findViewById(R.id.magic_indicator3);
         magicIndicator.setBackgroundResource(R.drawable.round_indicator_bg);
         CommonNavigator commonNavigator = new CommonNavigator(this);
+        commonNavigator.setAdjustMode(true);
         commonNavigator.setAdapter(new CommonNavigatorAdapter() {
             @Override
             public int getCount() {
@@ -64,7 +65,7 @@ public class HealthActivity extends BaseActivity{
                 clipPagerTitleView.setText(mDataList.get(index));
                 clipPagerTitleView.setTextColor(Color.parseColor("#e94220"));
                 clipPagerTitleView.setClipColor(Color.WHITE);
-                clipPagerTitleView.setPadding(26);
+                clipPagerTitleView.setTextSize(UIUtil.dip2px(context, 14));
                 clipPagerTitleView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

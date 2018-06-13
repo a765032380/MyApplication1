@@ -1,1 +1,1 @@
-include ':app', ':gll_okhttp',"imageLoader",':nicevideoplayer','magicindicator','downloaderHelper'
+include ':app', ':gll_okhttp', "imageLoader", ':nicevideoplayer', 'magicindicator', 'downloaderHelper', ':NumberProgressBar'

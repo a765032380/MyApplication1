@@ -111,12 +111,12 @@ public abstract class Base2Activity extends AppCompatActivity {
     //返回键返回事件
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (KeyEvent.KEYCODE_BACK == keyCode) {
-            if (getSupportFragmentManager().getBackStackEntryCount() == 1) {
+//        if (KeyEvent.KEYCODE_BACK == keyCode) {
+//            if (getSupportFragmentManager().getBackStackEntryCount() == 1) {
             finish();
-            return true;
-            }
-        }
+//            return true;
+//            }
+//        }
         return super.onKeyDown(keyCode, event);
     }
 

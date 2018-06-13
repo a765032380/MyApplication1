@@ -129,5 +129,9 @@ public abstract class AppActivity extends Base2Activity {
         return R.layout.activity_main;
     }
 
-
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        finish();
+//    }
 }
