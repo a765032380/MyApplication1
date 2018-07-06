@@ -22,6 +22,10 @@ public class URL {
      * 重置密码
      */
     public static final String API_RESET_PASSWORD=API+"";
+    /**
+     * 众筹列表接口
+     */
+    public static final String API_CROWDFUNDING="http://yingshi.oyaoyin.com/api/crowdfunding";
 
 
 

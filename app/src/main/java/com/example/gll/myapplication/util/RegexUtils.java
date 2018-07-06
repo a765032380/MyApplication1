@@ -2,6 +2,8 @@ package com.example.gll.myapplication.util;
 
 /**
  * Created by mac on 2018/6/1.
+ *
+ * 校验输入格式的工具类
  */
 
 import java.util.regex.Matcher;

@@ -39,10 +39,6 @@
         <activity android:name=".activity.personal.SettingActivity" android:theme="@style/otherPageStyle"> </activity>
         <activity android:name=".activity.personal.VoteActivity" android:theme="@style/otherPageStyle"> </activity>
         <activity android:name=".activity.personal.WalletActivity" android:theme="@style/otherPageStyle"> </activity>
-        <activity android:name=".activity.VideoActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait">
-        </activity>
         <activity android:name=".activity.RecycleActivity" android:theme="@style/otherPageStyle"> </activity>
         <activity android:name=".activity.ImageActivity" android:theme="@style/otherPageStyle"> </activity>
         <activity android:name=".activity.IdiomStoryActivity" android:theme="@style/otherPageStyle"> </activity>
@@ -58,6 +54,10 @@
 
 
         <activity android:name=".activity.RegisteredNextActivity" />
+        <activity android:name=".activity.video.SkinActivity"
+            android:configChanges="orientation|keyboard|locale|screenSize|layoutDirection"
+            android:label="@string/full_ui_player_demo"
+            android:screenOrientation="portrait"/>
 
         <!--**********************Service************************-->
         <service android:name="com.yaoxiaowen.download.service.DownloadService"/>

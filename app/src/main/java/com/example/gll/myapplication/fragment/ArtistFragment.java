@@ -8,12 +8,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.gll.myapplication.R;
-import com.example.gll.myapplication.activity.VideoActivity;
+import com.example.gll.myapplication.activity.video.SkinActivity;
 import com.example.gll.myapplication.adapter.HomeActorSelectAdapter;
 import com.example.gll.myapplication.base.BaseFragment;
 import com.example.gll.myapplication.bean.ShareCardItem;
-import com.example.gll.myapplication.loader.GlideImageLoader;
-import com.example.gll.myapplication.util.StreamUtils;
 import com.example.gll.myapplication.view.card_view.ShareCardView;
 import com.google.gson.Gson;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -95,7 +93,7 @@ public class ArtistFragment extends BaseFragment implements OnRefreshListener{
             @Override
             public void onClickListener(String url) {
 
-                startActivity(VideoActivity.class);
+                startActivity(SkinActivity.class);
 //                Intent intent = new Intent(getContext(), MyWebViewActivity.class);
 //                intent.putExtra("url", url);
 //                getContext().startActivity(intent);

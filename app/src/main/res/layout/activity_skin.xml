@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_skin"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <com.aliyun.vodplayerview.widget.AliyunVodPlayerView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <Button
+        android:id="@+id/log"
+        style="@style/btn_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/show_log"/>
+
+
+    <Button
+        style="@style/btn_style"
+        android:id="@+id/blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alivc_theme_blue"/>
+
+    <Button
+        style="@style/btn_style"
+        android:id="@+id/green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alivc_theme_green"/>
+
+    <Button
+        style="@style/btn_style"
+        android:id="@+id/orange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alivc_theme_orange"/>
+
+    <Button
+        style="@style/btn_style"
+        android:id="@+id/red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alivc_theme_red"/>
+
+    <Button
+        style="@style/btn_style"
+        android:id="@+id/change_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/change_source"/>
+
+
+</LinearLayout>

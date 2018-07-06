@@ -113,7 +113,9 @@ public class CommonJsonCallback implements Callback {
 
 
 
-        String responseObj= Base64.decode(String.valueOf(response));
+//        String responseObj= Base64.decode(String.valueOf(response));
+
+        String responseObj= String.valueOf(response);
 
         Log.i("LLLLLL",String.valueOf(responseObj));
 
@@ -157,21 +159,21 @@ public class CommonJsonCallback implements Callback {
 
                 mListener.onSuccess(result);
             } else {
-                if (result!=null){
-                    Log.i("BBB",String.valueOf(responseObj));
-                    mListener.onSuccess(result);
-
-                }else {
-                    mListener.onFailure(new OkHttpException(JSON_ERROR, EMPTY_MSG));
-                }
-
-//                Object obj = ResponseEntityToModule.parseJsonObjectToModule(result, mClass);
-//                Log.i("CCC",String.valueOf(obj));
-//                if (obj != null) {
-//                    mListener.onSuccess(obj);
-//                } else {
+//                if (result!=null){
+//                    Log.i("BBB",String.valueOf(responseObj));
+//                    mListener.onSuccess(result);
+//
+//                }else {
 //                    mListener.onFailure(new OkHttpException(JSON_ERROR, EMPTY_MSG));
 //                }
+
+                Object obj = ResponseEntityToModule.parseJsonObjectToModule(result, mClass);
+                Log.i("CCC",String.valueOf(obj));
+                if (obj != null) {
+                    mListener.onSuccess(obj);
+                } else {
+                    mListener.onFailure(new OkHttpException(JSON_ERROR, EMPTY_MSG));
+                }
             }
         } catch (Exception e) {
             Log.i("DDD",String.valueOf(NETWORK_ERROR));

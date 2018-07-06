@@ -47,7 +47,12 @@ public abstract class CommonAdapter<T> extends RecyclerView.Adapter<ViewHolder>
     @Override
     public int getItemCount()
     {
-        return mDatas.size();
+        return mDatas!=null?mDatas.size():0;
+//        if (mDatas!=null) {
+//            return mDatas.size();
+//        }else {
+//            return 0;
+//        }
     }
     public void updateData(List<T> data) {
         this.mDatas = data;

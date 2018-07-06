@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.baisi.imoocsdk.imageloader.ImageLoaderManager;
+import com.bumptech.glide.Glide;
 import com.example.gll.myapplication.view.CustomImageView;
 import com.example.gll.myapplication.view.RoundByXfermode;
 
@@ -58,6 +60,18 @@ public class ViewHolder extends RecyclerView.ViewHolder
     {
         TextView tv = getView(viewId);
         tv.setText(text);
+        return this;
+    }
+    public ViewHolder setImage(int viewId, String text)
+    {
+        ImageView iv = getView(viewId);
+        ImageLoaderManager.getInstance(iv.getContext()).displayImage(iv,text);
+        return this;
+    }
+    public ViewHolder setVisibility(int viewId, int viewState)
+    {
+        View view = getView(viewId);
+        view.setVisibility(viewState);
         return this;
     }
 

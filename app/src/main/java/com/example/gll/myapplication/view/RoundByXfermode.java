@@ -15,6 +15,7 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.graphics.Xfermode;
 import android.graphics.drawable.Drawable;
+import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
@@ -27,7 +28,7 @@ import java.lang.ref.WeakReference;
 /**
  * Created by ylwang on 2017/1/23.
  */
-public class RoundByXfermode extends ImageView {
+public class RoundByXfermode extends AppCompatImageView {
 
     private Paint mPaint;
     //求交集

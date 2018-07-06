@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath 'com.android.tools.build:gradle:3.1.3'
         
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -21,6 +21,10 @@ allprojects {
         jcenter()
         maven {
             url 'https://jitpack.io'
+        }
+        flatDir{
+            dirs 'libs'
+            dirs project(':AVMP_SkinLibrary').file('libs')
         }
     }
 }

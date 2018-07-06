@@ -17,13 +17,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-    }
-    packagingOptions {
-        exclude 'assets/lib/armeabi-v7a/libijkplayer.so'
-    }
+//    lintOptions {
+//        checkReleaseBuilds false
+//        abortOnError false
+//    }
+//    packagingOptions {
+//        exclude 'assets/lib/armeabi-v7a/libijkplayer.so'
+//    }
 }
 
 dependencies {
@@ -31,7 +31,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:support-v4:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     /**************************第三方依赖******************************/
@@ -56,15 +56,13 @@ dependencies {
     implementation project(':gll_okhttp')
     //自己封装的图片加载组件
     implementation project(path: ':imageLoader')
-//    //视频播放的依赖
-//    implementation project(path: ':nicevideoplayer')
     //ViewPager指示器组件
     implementation project(path: ':magicindicator')
     //下载文件的依赖，支持断点续传
     implementation project(path :':downloaderHelper')
     //引用自动定义的进度条View
     implementation project(path :':NumberProgressBar')
-    //视频播放完整版引入
-    implementation 'com.shuyu:GSYVideoPlayer:5.0.0-beta'
+    //阿里视频播放
+    implementation project(path: ':AVMP_SkinLibrary')
 
 }

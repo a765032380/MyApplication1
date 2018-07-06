@@ -1,1 +1,1 @@
-include ':app', ':gll_okhttp', "imageLoader", ':nicevideoplayer', 'magicindicator', 'downloaderHelper', ':NumberProgressBar'
+include ':app', ':gll_okhttp', "imageLoader", 'magicindicator', 'downloaderHelper', ':NumberProgressBar',"AVMP_SkinLibrary"
