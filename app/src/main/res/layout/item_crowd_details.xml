@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="100dp"
     android:layout_height="wrap_content">
-    <com.example.gll.myapplication.view.RoundByXfermode
+    <com.zhongguoyingshiwang.www.myapplication.view.RoundByXfermode
         app:type="circle"
         android:id="@+id/iv_image"
         android:src="@drawable/ic_launcher_background"

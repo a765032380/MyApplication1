@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:mlns="http://schemas.android.com/tools">
      <TextView
+         android:visibility="gone"
          android:background="@color/colorPrimary"
          android:text="中国影视官网"
          android:paddingTop="20dp"
@@ -14,7 +15,6 @@
          android:layout_width="match_parent"
          android:layout_height="60dp" />
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
-        android:layout_marginTop="60dp"
         android:focusableInTouchMode="true"
         android:focusable="true"
         android:id="@+id/refreshLayout"

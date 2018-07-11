@@ -28,12 +28,12 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-    <com.example.gll.myapplication.view.card_view.ShareCardView
+    <com.zhongguoyingshiwang.www.myapplication.view.card_view.ShareCardView
         android:id="@+id/share_cardview"
         android:layout_width="match_parent"
         android:layout_height="200dp">
 
-    </com.example.gll.myapplication.view.card_view.ShareCardView>
+    </com.zhongguoyingshiwang.www.myapplication.view.card_view.ShareCardView>
     <!--<com.youth.banner.Banner-->
 
         <!--android:id="@+id/banner_artist"-->

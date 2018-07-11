@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/bg_share_card">
 
-    <com.example.gll.myapplication.view.RoundByXfermode
+    <com.zhongguoyingshiwang.www.myapplication.view.RoundByXfermode
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
